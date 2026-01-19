@@ -1,2 +1,3 @@
 # PEDDRIFT
 PEDDRIFT is an R function which tests for allele frequency differences between selection lines and allows for the effect of genetic drift. The technique is based on simulating genetic inheritance under the null hypothesis (that establishment of, and selection within the lines has not placed any selection pressure on the locus of interest), based on the pedigree and sampling structure in the data. A description of the theory and possible alternative methods is given in Dodds, K G and McEwan, J C  (1997) Calculating exact probabilities of allele frequency differences in divergent selection lines. Proc Assoc Advmt Anim Breed Genet 12, 556-560.
+
