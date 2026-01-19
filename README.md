@@ -21,5 +21,5 @@ The program may be used to analyse actual data, by including genotypes at a locu
 
 
 ## Acknowledgements
-Ken Dodds
+Ken Dodds  
 John McEwan
