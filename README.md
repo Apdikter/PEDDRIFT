@@ -21,5 +21,5 @@ The program may be used to analyse actual data, by including genotypes at a locu
 
 
 ## Acknowledgements
-Principal Scientist Ken Dodds, Bioeconomy Science Institute, AgResearch Group
+Principal Scientist Ken Dodds, Bioeconomy Science Institute, AgResearch Group  
 Principal Scientist John McEwan, Bioeconomy Science Institute, AgResearch Group
