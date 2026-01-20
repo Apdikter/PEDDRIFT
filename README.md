@@ -8,7 +8,7 @@ Dodds, K G and McEwan, J C  (1997) Calculating exact probabilities of allele fre
 
 
 ## Installation
-USE `devtools::install_github("Apdikter/PEDDRIFT")`
+In R, `devtools::install_github("Apdikter/PEDDRIFT")`
 
 
 ## Instructions
