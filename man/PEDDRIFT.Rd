@@ -1,21 +1,59 @@
-\name{PEDDRIFT}
-\alias{PEDDRIFT}
-%- Also NEED an '\alias' for EACH other topic documented here.
+\name{peddrift}
+
+\alias{peddrift}
+
 \title{
-A Capitalized Title (ideally limited to 65 characters)
+PROBABILITIES OF ALLELE FREQUENCY DIFFERENCES IN DIVERGENT SELECTION LINES
 }
+
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Estimates exact probabilities of allele frequency differences between divergent selection lines.
+
+
 }
+
 \usage{
-PEDDRIFT(pedigree, allele_freq=NULL, nrep=1000, rseed=0, prune=TRUE, allall=FALSE)
+peddrift(pedigree, allele_freq=NULL, nrep=1000, rseed=0, prune=TRUE, allall=FALSE)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{pedigree}{
+object containing pedigree and genotype information. This file should contain the variables  tag, sire, dam, line, test (all numeric) and locus (0, 1, 2 or AA, AB, BB format).
+
+animals with no sire or dam  (e.g., NA) are treated as founders.
 }
+
+\item{afreq}{
+object (optional) containing allele frequencies in an initial founding population. If not provided, allele_freq is calculated as the (equally weighted) mean between selection lines.
 }
+
+
+\item{nrep}{
+integer; number of replicates to be simulated under neutral (random) evolutionary drift.
+}
+
+
+\item{rseed}{
+integer; seed used for simulations.
+}
+
+\item{prune}{
+logical; if TRUE, pedigree is reduced only to genotyped animals (test = 1) and their ancestors.
+
+(reccomended for reduced computation times).
+}
+
+
+\item{allall}{
+logical; if TRUE, simulations wherein alleles reach fixation are excluded from calculation of test statistics.
+
+(reccomended for rare alleles).
+}
+
+
+}
+
+
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
@@ -27,37 +65,19 @@ PEDDRIFT(pedigree, allele_freq=NULL, nrep=1000, rseed=0, prune=TRUE, allall=FALS
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+Dodds, K G and McEwan, J C (1997) Calculating exact probabilities of allele frequency differences in divergent selection lines. Proc Assoc Advmt Anim Breed Genet 12, 556-560. https://doi.org/10.13140/2.1.4568.7043
 }
 \author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+Zak Morrison
+
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 ##---- Should be DIRECTLY executable !! ----
 ##-- ==>  Define data, use random,
 ##--	or standard data sets, see data().
 
-## The function is currently defined as
-function (x) 
-{
-  }
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory (show via RShowDoc("KEYWORDS")):
-% \keyword{ ~kwd1 }
-% \keyword{ ~kwd2 }
-% Use only one keyword per line.
-% For non-standard keywords, use \concept instead of \keyword:
-% \concept{ ~cpt1 }
-% \concept{ ~cpt2 }
-% Use only one concept per line.
+##-- load in example data from github repo
+##-- run peddrift with nrep = 1000 over 1 SNP with specified fpop allele freq 
 
