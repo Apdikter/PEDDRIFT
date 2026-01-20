@@ -1,6 +1,6 @@
-\name{peddrift}
+\name{PEDDRIFT}
 
-\alias{peddrift}
+\alias{PEDDRIFT}
 
 \title{
 PROBABILITIES OF ALLELE FREQUENCY DIFFERENCES IN DIVERGENT SELECTION LINES
