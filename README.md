@@ -7,7 +7,7 @@ A description of the theory and possible alternative methods is given in:
 Dodds, K G and McEwan, J C  (1997) Calculating exact probabilities of allele frequency differences in divergent selection lines. Proc Assoc Advmt Anim Breed Genet 12, 556-560. https://doi.org/10.13140/2.1.4568.7043
 
 
-## Installation
+## R Installation
 In R, `devtools::install_github("Apdikter/PEDDRIFT")`
 
 
