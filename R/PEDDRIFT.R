@@ -1,4 +1,4 @@
-peddrift <- function(pedigree, allele_freq = NULL, nrep = 1000, rseed = 0, prune = TRUE, allall = FALSE) {
+PEDDRIFT <- function(pedigree, allele_freq = NULL, nrep = 1000, rseed = 0, prune = TRUE, allall = FALSE) {
 
   # Load required packages
   require(dplyr)
