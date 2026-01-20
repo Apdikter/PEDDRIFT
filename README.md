@@ -7,6 +7,9 @@ A description of the theory and possible alternative methods is given in:
 Dodds, K G and McEwan, J C  (1997) Calculating exact probabilities of allele frequency differences in divergent selection lines. Proc Assoc Advmt Anim Breed Genet 12, 556-560. https://doi.org/10.13140/2.1.4568.7043
 
 
+## Installation
+USE `devtools::install_github("Apdikter/PEDDRIFT")`
+
 
 ## Instructions
 * The user must supply a dataset containing pedigree information. This must be sorted so that parents precede progeny. For species which need to be at least one year old to have progeny,  sorting on year of birth or including year of birth as a prefix in the individual identification field, and using this as the sort criterion, is usually sufficient. Otherwise, a topological sort may be required.
