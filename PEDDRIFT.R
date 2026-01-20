@@ -140,6 +140,35 @@ peddrift <- function(pedigree, allele_freq = NULL, nrep = 1000, rseed = 0, prune
 
   nalls <- nrow(allele_freq)
 
+  # Check for monomorphic/fixed loci, e.g., freq = 0 | 1
+  if (any(allele_freq$freq == 0) || any(allele_freq$freq == 1)){
+   cat("WARNING: Monomorphic locus (only 1 allele) - skipping analysis\n")
+   results <- list(
+      observed = list(
+        chisq = NA,
+        diff = NA,
+        t = NA
+      ),
+      pvalues = list(
+        chisq = NA,
+        diff = NA,
+        t = NA
+      ),
+      simulated = data.frame(
+        chisq = NA,
+        diff = NA,
+        t = NA
+      ),
+      summary = list(
+        n_lines = nsel,
+        n_alleles = nalls,
+        n_replicates = nrep,
+        allele_freq = allele_freq
+      )
+    )
+    return(invisible(results))
+}
+
   # For 2x2 case, calculate additional statistics
   if (nsel == 2 && nalls == 2 && has_locus) {
     freq_table <- alleles %>%
@@ -389,7 +418,7 @@ peddrift <- function(pedigree, allele_freq = NULL, nrep = 1000, rseed = 0, prune
       summary = list(
         n_lines = nsel,
         n_alleles = nalls,
-        n_replicates = length(sim_chisq),
+        n_replicates = nrep,
         allele_freq = allele_freq
       )
     )
