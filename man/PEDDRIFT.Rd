@@ -13,7 +13,7 @@ Estimates exact probabilities of allele frequency differences between divergent 
 }
 
 \usage{
-peddrift(pedigree, allele_freq=NULL, nrep=1000, rseed=0, prune=TRUE, allall=FALSE)
+PEDDRIFT(pedigree, allele_freq=NULL, nrep=1000, rseed=0, prune=TRUE, allall=FALSE)
 }
 
 \arguments{
