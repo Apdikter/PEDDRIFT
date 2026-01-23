@@ -397,8 +397,6 @@ peddrift <- function(pedigree, afreq = NULL, nrep = 1000, rseed = 0, prune = TRU
         afreq = afreq
       )
     )
-
     return(invisible(results))
-
     }
     }
