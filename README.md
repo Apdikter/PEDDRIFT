@@ -17,7 +17,7 @@ The method uses pedigree-based simulation to test the null hypothesis that obser
 3. Compares observed allele frequency differences to the null distribution
 4. Identifies loci where differentiation exceeds what drift alone would produce
 
-This pedigree-aware approach is more powerful than standard FST methods when detailed genealogical records are available, as it explicitly models the actual inheritance process rather than assuming random mating.
+This pedigree-aware approach is more powerful than standard FST methods when detailed genealogical records are available, as it explicitly models the actual inheritance process rather than assuming random mating within subpopulations.
 
 
 
