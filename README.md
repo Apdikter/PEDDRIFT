@@ -19,9 +19,6 @@ The method uses pedigree-based simulation to test the null hypothesis that obser
 
 This pedigree-aware approach is more powerful than standard FST methods when detailed genealogical records are available, as it explicitly models the actual inheritance process rather than assuming random mating within subpopulations.
 
-
-
-
 ## Installation
 ```r
 # Install from GitHub
@@ -61,10 +58,26 @@ results$pvalues
 - **Founders**: Animals with missing parents (NA for both sire and dam) are treated as base population founders, with alleles sampled from the founder frequency distribution
 
 
-## User Instructions
-* User must supply a dataset containing pedigree information sorted such that all parents precede their progeny. For species which need to be at least one year old to have progeny, sorting on year of birth is usually sufficient. If not, a topological sort may be required.
-* No animals should have duplicate entries or tags, and each animal specified as a parent should have its own entry.
-* Animals with missing parents are treated as belonging to the base population, i.e., 'founders.' In this case, both alleles are sampled from the base population frequency provided in argument  `afreq`.
+### Parameters:
+
+- **`pedigree`**: Data frame containing pedigree and genotype information
+- **`afreq`**: Founder allele frequencies
+  - `NULL` (default): Estimated as the mean frequency across lines
+  - Single numeric value (0-1): Reference allele frequency (for biallelic loci)
+  - Data frame: Custom frequencies with columns `allele` and `freq`
+- **`nrep`**: Number of simulation replicates (default: 1000)
+- **`rseed`**: Random seed for reproducibility (default: 0 = no seed)
+- **`prune`**: Whether to prune pedigree to ancestors of genotyped animals (default: TRUE)
+- **`allall`**: Whether to exclude simulations where alleles go extinct (default: FALSE)
+
+### Output:
+
+Returns a list containing:
+- **`observed`**: Observed test statistics (chi-square, frequency difference, t-statistic)
+- **`pvalues`**: P-values for each test statistic
+- **`simulated`**: Data frame of simulated test statistics from all replicates
+- **`summary`**: Summary information (number of lines, alleles, replicates, founder frequencies)
+
 
 ## Acknowledgements
 Principal Scientist **Ken Dodds**, Bioeconomy Science Institute, AgResearch Group  
