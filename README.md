@@ -22,10 +22,6 @@ This pedigree-aware approach is more powerful than standard FST methods when det
 
 
 
-## Description
-A description of the theory and possible alternative methods is given in:  
-Dodds, K G and McEwan, J C  (1997) Calculating exact probabilities of allele frequency differences in divergent selection lines. Proc Assoc Advmt Anim Breed Genet 12, 556-560. https://doi.org/10.13140/2.1.4568.7043
-
 
 ## Installation
 In R, `devtools::install_github("Apdikter/PEDDRIFT")`
@@ -40,3 +36,10 @@ In R, `devtools::install_github("Apdikter/PEDDRIFT")`
 Principal Scientist **Ken Dodds**, Bioeconomy Science Institute, AgResearch Group  
 Principal Scientist **John McEwan**, Bioeconomy Science Institute, AgResearch Group
 Summer Intern **Zak Morrison**, Bioeconomy Science Instititute, AgResearch Group
+
+## References
+
+A description of the theory and possible alternative methods is given in:  
+Dodds, K G and McEwan, J C  (1997) Calculating exact probabilities of allele frequency differences in divergent selection lines. Proc Assoc Advmt Anim Breed Genet 12, 556-560. https://doi.org/10.13140/2.1.4568.7043
+
+
