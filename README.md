@@ -81,7 +81,7 @@ Returns a list containing:
 
 ## Acknowledgements
 Principal Scientist **Ken Dodds**, Bioeconomy Science Institute, AgResearch Group  
-Principal Scientist **John McEwan**, Bioeconomy Science Institute, AgResearch Group
+Principal Scientist **John McEwan**, Bioeconomy Science Institute, AgResearch Group  
 Summer Intern **Zak Morrison**, Bioeconomy Science Instititute, AgResearch Group
 
 ## References
