@@ -14,7 +14,7 @@ In R, `devtools::install_github("Apdikter/PEDDRIFT")`
 ## User Instructions
 * User must supply a dataset containing pedigree information sorted such that all parents precede their progeny. For species which need to be at least one year old to have progeny, sorting on year of birth is usually sufficient. If not, a topological sort may be required.
 * No animals should have duplicate entries or tags, and each animal specified as a parent should have its own entry.
-* Animals with missing parents are treated as belonging to the base population, i.e., 'founders.' In this case, both alleles are sampled from the base population frequency provided in the  `afreq` argument.
+* Animals with missing parents are treated as belonging to the base population, i.e., 'founders.' In this case, both alleles are sampled from the base population frequency provided in argument  `afreq.`
 
 ## Acknowledgements
 Principal Scientist **Ken Dodds**, Bioeconomy Science Institute, AgResearch Group  
