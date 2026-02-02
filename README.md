@@ -22,9 +22,43 @@ This pedigree-aware approach is more powerful than standard FST methods when det
 
 
 
-
 ## Installation
-In R, `devtools::install_github("Apdikter/PEDDRIFT")`
+```r
+# Install from GitHub
+devtools::install_github("Apdikter/PEDDRIFT")
+```
+
+## Quick Start
+```r
+library(PEDDRIFT)
+
+# Load your pedigree data with genotypes
+ped <- read.csv("pedigree_data.csv")
+
+# Run PEDDRIFT with 1000 simulations
+results <- peddrift(ped, nrep = 1000)
+
+# View results
+results$pvalues
+```
+
+## Input Requirements
+
+### Required columns:
+- `tag`: Unique animal identifier
+- `sire`: Sire identifier (NA for founders)
+- `dam`: Dam identifier (NA for founders)
+- `line`: Selection line (must have exactly 2 lines coded as 1 and 2)
+- `locus`: Genotype data (see formats below)
+
+### Genotype formats:
+- **Numeric**: 0, 1, 2 (homozygous reference, heterozygous, homozygous alternate)
+- **Two-letter**: AA, AB, BB (or any two-letter combination)
+
+### Important notes:
+- **Pedigree must be topologically sorted**: All parents must appear before their offspring in the dataset
+- **No duplicate animal IDs**: Each animal should appear exactly once
+- **Founders**: Animals with missing parents (NA for both sire and dam) are treated as base population founders, with alleles sampled from the founder frequency distribution
 
 
 ## User Instructions
