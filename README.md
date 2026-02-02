@@ -1,5 +1,25 @@
 # *PEDDRIFT*
-PEDDRIFT is a tool for testing allele frequency differences between selection lines and allows for esitmation of the effect of genetic drift. The technique is based on simulating genetic inheritance under the null hypothesis (that establishment of, and selection within the lines has not placed any selection pressure on the locus of interest), based on the pedigree and sampling structure in the data. 
+PEDDRIFT is an R tool for testing whether allele frequency differences between selection lines are consistent with genetic drift alone, or indicate selection pressure at specific loci.
+
+## Overview
+
+The method uses pedigree-based simulation to test the null hypothesis that observed genetic differentiation arose purely through drift, with no selection on the locus of interest. By simulating Mendelian inheritance through the actual pedigree structure, PEDDRIFT accounts for:
+
+- Population structure and relatedness
+- Sampling effects from limited genotyping
+- Random genetic drift across generations
+- Line-specific breeding schemes
+
+## How it works
+
+1. Takes observed genotype data from two selection lines
+2. Simulates genetic inheritance through the pedigree under neutral evolution
+3. Compares observed allele frequency differences to the null distribution
+4. Identifies loci where differentiation exceeds what drift alone would produce
+
+This pedigree-aware approach is more powerful than standard FST methods when detailed genealogical records are available, as it explicitly models the actual inheritance process rather than assuming random mating.
+
+
 
 
 ## Description
