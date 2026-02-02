@@ -12,7 +12,7 @@ In R, `devtools::install_github("Apdikter/PEDDRIFT")`
 
 
 ## Instructions
-* User must supply a dataset containing pedigree information sorted such that all parents precede their progeny. For species which need to be at least one year old to have progeny, sorting on year of birth is usually sufficient. Otherwise, a topological sort may be required.
+* User must supply a dataset containing pedigree information sorted such that all parents precede their progeny. For species which need to be at least one year old to have progeny, sorting on year of birth is usually sufficient. If not, a topological sort may be required.
 
 * No animals should have duplicate entries or tags, and each animal specified as a parent should have its own entry. The program checks for duplicate entries only for those animals which are parents. In this case, or in the case where a specified parent does not have its own entry, a message will be issued and the program will stop after checking the remainder of the pedigree file.
 
